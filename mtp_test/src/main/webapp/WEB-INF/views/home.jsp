@@ -11,5 +11,8 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}. 준혁</P>
+<button onclick="location.replace('/list')">회원리스트</button>
+<button onclick="location.replace('/insert')">회원등록</button>
+
 </body>
 </html>

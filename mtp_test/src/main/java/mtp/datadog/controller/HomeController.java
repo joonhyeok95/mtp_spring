@@ -35,5 +35,12 @@ public class HomeController {
 		
 		return "home";
 	}
-	
+	@RequestMapping("/list")
+	public String list() {
+		return "list";
+	}
+	@RequestMapping("/insert")
+	public String insert() {
+		return "insert";
+	}
 }
