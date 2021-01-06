@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import mtp.datadog.domain.MemberVO;
 import mtp.datadog.service.MemberService;
@@ -24,13 +25,21 @@ public class MemberController {
 		model.addAttribute("list", service.getList());
 		return "list";
 	}
-	
+	/*
 	@PostMapping("/insert")
 	public String insertData(@RequestBody MemberVO vo) {
-		System.out.println("넘어온 값 : " + vo.toString());
+		System.out.println("value : " + vo.toString());
 		System.out.println("controller insertData ------------start");
 		service.insert(vo);
-		return "redirect:/";
+		return "redirect:list";
+	}
+	*/
+	@PostMapping("/insert")
+	public String insertDataGet(MemberVO vo) {
+		System.out.println("value : " + vo.toString());
+		System.out.println("controller insertData ------------start");
+		service.insert(vo);
+		return "redirect:list";
 	}
 
 	@GetMapping("/insert")
@@ -43,6 +52,11 @@ public class MemberController {
 		System.out.println("get name : " + name);
 		System.out.println("controller delete------------start");
 		service.delete(name);
-		return "list";
+		return "redirect:/list";
+	}
+	@GetMapping("/test")
+	public String test() {
+		System.out.println("test page");
+		return "a";
 	}
 }

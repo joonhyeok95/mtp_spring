@@ -9,4 +9,8 @@
 	<insert id="insert" parameterType="mtp.datadog.domain.MemberVO">
 		insert into member ( name, phone ) values ( #{name}, #{phone} )
 	</insert>
+	<delete id="delete" parameterType="String">
+		delete from member where name = #{name}
+	</delete>
+	
 </mapper> 
