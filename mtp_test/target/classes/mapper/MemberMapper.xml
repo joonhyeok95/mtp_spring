@@ -13,4 +13,7 @@
 		delete from member where name = #{name}
 	</delete>
 	
+	<select id="login" resultType="mtp.datadog.domain.MemberVO">
+		select * from member where name=#{name} and phone=#{phone}
+	</select>
 </mapper> 

@@ -9,4 +9,6 @@ public interface MemberService {
 	public void insert(MemberVO vo);
 	public void delete(String name);
 	
+	
+	public MemberVO login(MemberVO vo);
 }

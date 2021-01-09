@@ -13,26 +13,28 @@ public class MemberServiceImpl implements MemberService {
 
 	@Autowired
 	MemberMapper mapper;
-	
+		
 	@Override
 	public List<MemberVO> getList() {
-		// TODO Auto-generated method stub
-		System.out.println("Service Member List 서비스---------------start");
+		System.out.println("회원 리스트 서비스---------------start");
 		return mapper.getList();
 	}
 
 	@Override
 	public void insert(MemberVO vo) {
-		// TODO Auto-generated method stub
-		System.out.println("Service insert 서비스---------------start");
+		System.out.println("회원 등록 서비스---------------start");
 		mapper.insert(vo);
 	}
 
 	@Override
 	public void delete(String name) {
-		// TODO Auto-generated method stub
-		System.out.println("Service delete 서비스---------------start");
+		System.out.println("회원 삭제 서비스---------------start");
 		mapper.delete(name);
+	}
+	@Override
+	public MemberVO login(MemberVO vo) {
+		// TODO Auto-generated method stub
+		return mapper.login(vo);
 	}
 
 }

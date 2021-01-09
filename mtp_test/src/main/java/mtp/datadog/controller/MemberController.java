@@ -25,15 +25,7 @@ public class MemberController {
 		model.addAttribute("list", service.getList());
 		return "list";
 	}
-	/*
-	@PostMapping("/insert")
-	public String insertData(@RequestBody MemberVO vo) {
-		System.out.println("value : " + vo.toString());
-		System.out.println("controller insertData ------------start");
-		service.insert(vo);
-		return "redirect:list";
-	}
-	*/
+	
 	@PostMapping("/insert")
 	public String insertDataGet(MemberVO vo) {
 		System.out.println("value : " + vo.toString());
