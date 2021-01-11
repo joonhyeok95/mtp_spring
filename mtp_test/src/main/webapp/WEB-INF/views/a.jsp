@@ -14,5 +14,6 @@
 	<input type="submit" value="저장" />
 	<input type="reset" value="초기화" />
 </form>
+1.0.4 업데이트 테스트입니다.
 </body>
 </html>
