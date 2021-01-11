@@ -14,19 +14,19 @@ public class mariadbTest {
 		//fail("Not yet implemented");
 	}
 	 private static final String DRIVER = "org.mariadb.jdbc.Driver";
-	 private static final String URL = "jdbc:mariadb://10.10.10.112:3306/mtp"; // jdbc:mysql://127.0.0.1:3306/¿©·¯ºĞÀÌ ¸¸µå½Å ½ºÅ°¸¶ÀÌ¸§
-	 private static final String USER = "root"; //DB »ç¿ëÀÚ¸í
-	 private static final String PW = "1234";   //DB »ç¿ëÀÚ ºñ¹Ğ¹øÈ£
+	 private static final String URL = "jdbc:mariadb://10.10.10.112:3306/mtp"; // jdbc:mysql://127.0.0.1:3306/ì—¬ëŸ¬ë¶„ì´ ë§Œë“œì‹  ìŠ¤í‚¤ë§ˆì´ë¦„
+	 private static final String USER = "root"; //DB ì‚¬ìš©ìëª…
+	 private static final String PW = "1234";   //DB ì‚¬ìš©ì ë¹„ë°€ë²ˆí˜¸
 	 
 	 @Test
 	 public void testConnection() throws Exception{
 	  Class.forName(DRIVER);
 	 
 	  try(Connection con = DriverManager.getConnection(URL, USER, PW)){
-	   System.out.println("¼º°ø");
+	   System.out.println("ì„±ê³µ");
 	   System.out.println(con);
 	  }catch (Exception e) {
-	   System.out.println("¿¡·¯¹ß»ı");
+	   System.out.println("ì—ëŸ¬ë°œìƒ");
 	   e.printStackTrace();
 	  }
 	  

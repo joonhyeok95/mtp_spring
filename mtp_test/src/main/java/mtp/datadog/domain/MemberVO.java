@@ -20,6 +20,6 @@ public class MemberVO {
 	public String toString() {
 		return "MemberVO [name=" + name + ", phone=" + phone + "]";
 	}
-	// getter setter ¸¸µé±â
+	// getter setter ë§Œë“¤ê¸°
 	// alt + shift + s ,r
 }

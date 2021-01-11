@@ -16,19 +16,19 @@ public class MemberServiceImpl implements MemberService {
 		
 	@Override
 	public List<MemberVO> getList() {
-		System.out.println("È¸¿ø ¸®½ºÆ® ¼­ºñ½º---------------start");
+		System.out.println("íšŒì› ë¦¬ìŠ¤íŠ¸ ì„œë¹„ìŠ¤---------------start");
 		return mapper.getList();
 	}
 
 	@Override
 	public void insert(MemberVO vo) {
-		System.out.println("È¸¿ø µî·Ï ¼­ºñ½º---------------start");
+		System.out.println("íšŒì› ë“±ë¡ ì„œë¹„ìŠ¤---------------start");
 		mapper.insert(vo);
 	}
 
 	@Override
 	public void delete(String name) {
-		System.out.println("È¸¿ø »èÁ¦ ¼­ºñ½º---------------start");
+		System.out.println("íšŒì› ì‚­ì œ ì„œë¹„ìŠ¤---------------start");
 		mapper.delete(name);
 	}
 	@Override

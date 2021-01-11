@@ -16,7 +16,7 @@ import mtp.datadog.service.MemberService;
 @Controller
 public class LoginController {
 
-	// ·Î±×ÀÎ°ü·Ã °Ô½Ã±ÛÂü°í(passsword ¾ÏÈ£È­ºÎºĞµµ ¼³¸í)
+	// ë¡œê·¸ì¸ê´€ë ¨ ê²Œì‹œê¸€ì°¸ê³ (passsword ì•”í˜¸í™”ë¶€ë¶„ë„ ì„¤ëª…)
 	// https://doublesprogramming.tistory.com/211
 
 	@Autowired
@@ -24,13 +24,13 @@ public class LoginController {
 
 	@PostMapping("/")
 	public String login(MemberVO vo, HttpServletRequest req, RedirectAttributes rttr, Model model) {
-		System.out.println("·Î±×ÀÎ ÄÁÆ®·Ñ·¯ ------------start");
+		System.out.println("ë¡œê·¸ì¸ ì»¨íŠ¸ë¡¤ëŸ¬ ------------start");
 		model.addAttribute("url", "/");
 		if (vo.getName().trim().equals("")) {
-			model.addAttribute("msg", "ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			model.addAttribute("msg", "ì´ë¦„ì„ ì…ë ¥í•´ì£¼ì„¸ìš”");
 			return "error";
 		} else if (vo.getPhone().trim().equals("")) {
-			model.addAttribute("msg", "ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä");
+			model.addAttribute("msg", "ì „í™”ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 			return "error";
 		}
 
@@ -38,14 +38,14 @@ public class LoginController {
 		MemberVO login = service.login(vo);
 
 		if (login == null) {
-			System.out.println("·Î±×ÀÎ ½ÇÆĞ");
+			System.out.println("ë¡œê·¸ì¸ ì‹¤íŒ¨");
 			ses.setAttribute("login", null);
 			rttr.addFlashAttribute("msg", false);
 
-			model.addAttribute("msg", "ÀÌ¸§ÀÌ³ª ÀüÈ­¹øÈ£°¡ Æ²·È½À´Ï´Ù.");
+			model.addAttribute("msg", "ì´ë¦„ì´ë‚˜ ì „í™”ë²ˆí˜¸ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤.");
 			return "error";
 		} else {
-			System.out.println("·Î±×ÀÎ ¼º°ø");
+			System.out.println("ë¡œê·¸ì¸ ì„±ê³µ");
 			ses.setAttribute("login", login);
 		}
 		return "redirect:/";
