@@ -24,7 +24,7 @@
  		<br /><br />
         전화번호 : ${login.phone}
         <br /><br />
-        <button onclick="location.replace('/logout')" class="bt2">로그아웃</button>
+        <button onclick="location.replace('<%= request.getContextPath() %>/logout')" class="bt2">로그아웃</button>
     </c:when>
     <c:otherwise>
         <h2>로그인 </h2>
@@ -49,8 +49,8 @@
     </c:otherwise>
 </c:choose>
 <hr>
-<button onclick="location.replace('/list')">회원리스트</button>
-<button onclick="location.replace('/insert')">회원등록</button>
+<button onclick="location.replace('<%= request.getContextPath() %>/list')">회원리스트</button>
+<button onclick="location.replace('<%= request.getContextPath() %>/insert')">회원등록</button>
 </center>
 </body>
 </html>

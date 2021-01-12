@@ -26,15 +26,15 @@
 			<tr>
 				<td><c:out value="${member.name}"/></td>
 				<td><c:out value="${member.phone}"/></td>
-				<td><button onclick="location.replace('/delete?name=${member.name}')">삭제</button>
+				<td><button onclick="location.replace('<%= request.getContextPath() %>/delete?name=${member.name}')">삭제</button>
 			</tr>
 		</c:forEach>
 	</thead>
 	
 </table>
 <br><br>
-<button onclick="location.replace('/')">home</button>
-<button onclick="location.replace('/insert')">회원등록</button>
+<button onclick="location.replace('<%= request.getContextPath() %>/')">home</button>
+<button onclick="location.replace('<%= request.getContextPath() %>/insert')">회원등록</button>
 </center>
 </body>
 </html>

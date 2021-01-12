@@ -16,7 +16,7 @@
 	회원등록
 </h1>
 
-<form method="post" action="/insert">
+<form method="post" action="<%= request.getContextPath() %>/insert">
 	<input type="text" id="name" name="name" placeholder="이름을 입력하세요. "/><br><br>
 	<input type="text" id="phone" name="phone" placeholder="전화번호를 입력하세요. "/><br>
 	<br>
@@ -24,8 +24,8 @@
 	<input type="reset" value="초기화" />
 </form>
 <br><br>
-<button type="button" onclick="location.replace('/')">home</button>&nbsp;&nbsp;&nbsp;
-<button type="button" onclick="location.replace('/list')">회원리스트</button>
+<button type="button" onclick="location.replace('<%= request.getContextPath() %>/')">home</button>&nbsp;&nbsp;&nbsp;
+<button type="button" onclick="location.replace('<%= request.getContextPath() %>/list')">회원리스트</button>
 </center>
 </body>
 </html>
