@@ -6,7 +6,7 @@
 <head>
 	<title>회원등록</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-	<link href="resources/css/common.css" rel="stylesheet" type="text/css"/>
+	<link href="https://10.50.3.90/front/resources/css/common.css" rel="stylesheet" type="text/css"/>
 <style>
 </style>
 </head>
