@@ -12,7 +12,7 @@
 <center>
 <br><br>
 <h1>
-	Hello 메타넷티플랫폼 Datadog! ver1.0.5
+	Hello 메타넷티플랫폼 Datadog! ver1.0.8
 </h1>
 <hr>
 <P>  서버시간 : ${serverTime}. </P>

@@ -24,7 +24,7 @@ public class LoginController {
 
 	@PostMapping("/")
 	public String login(MemberVO vo, HttpServletRequest req, RedirectAttributes rttr, Model model) {
-		System.out.println("로그인 컨트롤러 ------------start");
+		//System.out.println("로그인 컨트롤러 ------------start");
 		model.addAttribute("url", "/");
 		if (vo.getName().trim().equals("")) {
 			model.addAttribute("msg", "이름을 입력해주세요");
@@ -38,7 +38,7 @@ public class LoginController {
 		MemberVO login = service.login(vo);
 
 		if (login == null) {
-			System.out.println("로그인 실패");
+			//System.out.println("로그인 실패");
 			ses.setAttribute("login", null);
 			rttr.addFlashAttribute("msg", false);
 
