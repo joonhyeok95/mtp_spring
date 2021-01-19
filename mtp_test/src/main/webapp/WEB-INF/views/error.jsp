@@ -11,7 +11,7 @@
 <body>
 	<script>
 		alert('${msg}');
-		location.replace('${url}');
+		location.replace('<%= request.getContextPath() %>${url}');
 	</script>
 </body>
 </html>
